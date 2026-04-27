@@ -152,20 +152,6 @@
   color: #ffb18f;
 }
 
-.hero-location-pill {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  margin-bottom: 16px;
-  padding: 0 14px;
-  border-radius: 999px;
-  color: rgba(255, 247, 240, 0.9);
-  font-size: 0.9rem;
-  font-weight: 700;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
 .button {
   min-height: 56px;
   padding: 0 24px;
@@ -413,6 +399,13 @@
   letter-spacing: 0.16em;
   font-size: 0.76rem;
   font-weight: 800;
+}
+
+.intro-service-area {
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .intro-panel ul {
@@ -797,12 +790,6 @@
     text-shadow: 0 8px 22px rgba(0, 0, 0, 0.34);
   }
 
-  .hero-location-pill {
-    margin-bottom: 14px;
-    padding: 0 12px;
-    font-size: 0.82rem;
-  }
-
   .hero-actions {
     flex-direction: column;
     gap: 10px;
@@ -847,6 +834,33 @@
 
   .hero-stat span {
     font-size: 0.74rem;
+  }
+
+  .stats-strip,
+  .services-grid,
+  .process-list,
+  .testimonial-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .stats-strip::-webkit-scrollbar,
+  .services-grid::-webkit-scrollbar,
+  .process-list::-webkit-scrollbar,
+  .testimonial-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stat-card,
+  .service-card,
+  .process-item,
+  .testimonial-card {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
   }
 
   .process-item {

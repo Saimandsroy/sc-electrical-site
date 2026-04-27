@@ -159,7 +159,6 @@ function App() {
               <p className="section-kicker section-kicker-light">
                 Trusted electrical work in Cornwall
               </p>
-              <div className="hero-location-pill">{contact.serviceArea}</div>
               <h1>
                 <span>Modern electrical</span>
                 <span className="hero-title-accent">upgrades for</span>
@@ -226,6 +225,8 @@ function App() {
           </div>
 
           <div className="intro-panel">
+            <span>Service area</span>
+            <p className="intro-service-area">{contact.serviceArea}</p>
             <span>Common service focus</span>
             <ul>
               {trustPoints.map((item) => (

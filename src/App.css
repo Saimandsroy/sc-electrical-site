@@ -745,68 +745,106 @@
   }
 
   .hero-media {
-    min-height: 640px;
+    min-height: 760px;
     margin-top: 12px;
   }
 
   .hero-media::after {
     background:
-      linear-gradient(180deg, rgba(7, 10, 15, 0.08) 0%, rgba(7, 10, 15, 0.22) 36%, rgba(7, 10, 15, 0.78) 100%),
-      linear-gradient(90deg, rgba(7, 10, 15, 0.16), rgba(7, 10, 15, 0.04));
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.06) 48%, rgba(255, 244, 234, 0.18) 72%, rgba(255, 248, 242, 0.88) 100%),
+      linear-gradient(90deg, rgba(255, 250, 245, 0.08), rgba(255, 250, 245, 0));
   }
 
   .hero-media img {
-    object-position: center top;
-    transform: scale(1.02);
+    object-position: center 8%;
+    transform: scale(1.01);
   }
 
   .hero-copy {
     left: 16px;
     right: 16px;
     top: auto;
-    bottom: 84px;
+    bottom: 26px;
     width: auto;
-    padding: 18px 16px 14px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, rgba(11, 15, 22, 0.12), rgba(11, 15, 22, 0.82));
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 22px 42px rgba(8, 10, 15, 0.16);
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    border: 0;
+    backdrop-filter: none;
+    box-shadow: none;
   }
 
   .hero-copy h1 {
-    max-width: 9.5ch;
-    font-size: clamp(2.15rem, 9vw, 3rem);
-    line-height: 0.98;
-    text-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
-    gap: 0.08em;
+    max-width: 7.8ch;
+    font-size: clamp(2rem, 8.6vw, 2.65rem);
+    line-height: 0.94;
+    letter-spacing: -0.065em;
+    text-shadow: 0 10px 26px rgba(255, 255, 255, 0.16);
+    gap: 0.03em;
+    position: relative;
+  }
+
+  .hero-copy h1 span {
+    max-width: max-content;
+  }
+
+  .hero-copy h1 span:first-child,
+  .hero-copy h1 span:last-child {
+    color: #11141b;
+  }
+
+  .hero-copy h1 .hero-title-accent {
+    position: relative;
+    display: inline-block;
+    padding-right: 0.08em;
+    color: #d76a33;
+  }
+
+  .hero-copy h1 .hero-title-accent::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0.2em;
+    bottom: 0.08em;
+    height: 0.18em;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(255, 193, 139, 0.34), rgba(255, 193, 139, 0));
+    z-index: -1;
   }
 
   .hero-text {
-    margin-top: 14px;
-    font-size: 0.94rem;
-    line-height: 1.6;
-    max-width: none;
-    text-shadow: 0 8px 22px rgba(0, 0, 0, 0.34);
+    margin-top: 16px;
+    max-width: 16ch;
+    font-size: 0.95rem;
+    line-height: 1.36;
+    color: rgba(17, 20, 27, 0.78);
+    text-shadow: none;
   }
 
   .hero-actions {
-    flex-direction: column;
-    gap: 10px;
+    gap: 0;
     margin: 18px 0 0;
   }
 
-  .hero-actions .button {
-    min-height: 50px;
-    padding: 0 18px;
-    font-size: 0.98rem;
+  .hero-actions .button-secondary {
+    display: none;
   }
 
-  .hero-actions .button {
-    width: 100%;
+  .hero-actions .button-primary {
+    min-height: 46px;
+    padding: 0 20px;
+    width: auto;
+    font-size: 0.92rem;
+    color: #fff;
+    background: #10131a;
+    box-shadow: 0 16px 32px rgba(16, 19, 26, 0.18);
   }
 
   .hero-badges {
+    display: none;
+  }
+
+  .hero-text {
     display: none;
   }
 
@@ -815,25 +853,7 @@
   }
 
   .hero-stat-row {
-    left: 16px;
-    right: 16px;
-    bottom: 14px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-
-  .hero-stat {
-    min-width: 0;
-    padding: 10px 8px;
-    border-radius: 16px;
-  }
-
-  .hero-stat strong {
-    font-size: 0.98rem;
-  }
-
-  .hero-stat span {
-    font-size: 0.74rem;
+    display: none;
   }
 
   .stats-strip,
@@ -870,20 +890,21 @@
 
 @media (max-width: 420px) {
   .hero-media {
-    min-height: 600px;
+    min-height: 700px;
   }
 
   .hero-copy {
-    bottom: 78px;
+    bottom: 22px;
   }
 
   .hero-copy h1 {
-    font-size: clamp(1.95rem, 8.8vw, 2.45rem);
-    max-width: 9ch;
+    max-width: 7.4ch;
+    font-size: clamp(1.82rem, 8vw, 2.2rem);
   }
 
   .hero-text {
-    font-size: 0.9rem;
+    max-width: 15ch;
+    font-size: 0.88rem;
   }
 
   .nav-shell {

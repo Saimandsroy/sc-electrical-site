@@ -115,7 +115,7 @@ function App() {
       <header className="site-header">
         <div className="utility-bar">
           <div className="utility-wrap">
-            <p>{contact.serviceArea}</p>
+            <p className="utility-area">{contact.serviceArea}</p>
             <div className="utility-links">
               <a href={contact.phoneHref}>{contact.phoneDisplay}</a>
               <a href={`mailto:${contact.email}`}>{contact.email}</a>
@@ -141,7 +141,7 @@ function App() {
           </nav>
 
           <a className="header-cta" href="#contact">
-            Book a Free Quote
+            Free Quote
           </a>
         </div>
       </header>
@@ -159,11 +159,16 @@ function App() {
               <p className="section-kicker section-kicker-light">
                 Trusted electrical work in Cornwall
               </p>
-              <h1>Modern electrical upgrades for safer, smarter homes.</h1>
+              <div className="hero-location-pill">{contact.serviceArea}</div>
+              <h1>
+                <span>Modern electrical</span>
+                <span className="hero-title-accent">upgrades for</span>
+                <span>safer homes.</span>
+              </h1>
               <p className="hero-text">
-                Professional residential electrical work with a cleaner modern
-                presentation, built to feel premium on mobile and trustworthy
-                from the first glance.
+                Premium residential electrical work with a cleaner, more
+                professional presentation built to feel trustworthy at first
+                glance.
               </p>
 
               <div className="hero-actions">

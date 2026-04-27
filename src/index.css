@@ -1,27 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
 
 :root {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  --bg: #eef2f6;
-  --surface-900: #0f141c;
-  --surface-700: #273242;
-  --text-high: #f6f8fb;
-  --text-soft: rgba(246, 248, 251, 0.78);
-  --text-body: #556171;
-  --text-muted: #667487;
-  --accent: #ffb92f;
-  --border-strong: rgba(9, 14, 22, 0.08);
-  --panel-shadow: 0 30px 80px rgba(14, 19, 28, 0.1);
-  --soft-shadow: 0 20px 45px rgba(14, 19, 28, 0.08);
-  --font-display: 'Sora', sans-serif;
+  --bg: #edf1f5;
+  --surface-950: #10141c;
+  --surface-900: #171d27;
+  --text-body: #4c5a6d;
+  --text-muted: #7b8798;
+  --text-soft: rgba(247, 250, 252, 0.78);
+  --accent: #ef8d33;
+  --accent-strong: #cf4a31;
+  --panel-shadow: 0 32px 80px rgba(12, 18, 28, 0.12);
+  --soft-shadow: 0 20px 46px rgba(12, 18, 28, 0.08);
+  --font-display: 'Outfit', sans-serif;
 
   color: var(--text-body);
   background:
-    radial-gradient(circle at top, rgba(255, 185, 47, 0.1), transparent 26%),
-    linear-gradient(180deg, #f2f5f8, #e8edf3);
+    radial-gradient(circle at top, rgba(207, 74, 49, 0.08), transparent 24%),
+    linear-gradient(180deg, #f4f7fa, #e9eef3);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -48,11 +47,11 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.45) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.45) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 90%);
-  opacity: 0.22;
+    linear-gradient(rgba(255, 255, 255, 0.36) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.36) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.46), transparent 90%);
+  opacity: 0.24;
 }
 
 a {
@@ -63,26 +62,29 @@ h1,
 h2,
 h3 {
   margin: 0;
+  color: var(--surface-950);
+}
+
+h1,
+h2 {
   font-family: var(--font-display);
-  color: var(--surface-900);
+  line-height: 0.94;
+  letter-spacing: -0.05em;
 }
 
 h1 {
-  font-size: clamp(3.3rem, 9vw, 6.4rem);
-  line-height: 0.96;
-  letter-spacing: -0.06em;
-  color: var(--text-high);
+  font-size: clamp(3.1rem, 8vw, 6.2rem);
+  color: #fff;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1;
-  letter-spacing: -0.045em;
+  font-size: clamp(2.1rem, 4vw, 3.9rem);
 }
 
 h3 {
-  font-size: 1.1rem;
-  line-height: 1.15;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
 }
 
 p {
@@ -94,5 +96,5 @@ p {
 }
 
 ::selection {
-  background: rgba(255, 185, 47, 0.28);
+  background: rgba(207, 74, 49, 0.2);
 }

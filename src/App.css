@@ -659,30 +659,58 @@
   }
 
   .hero-media {
-    min-height: 760px;
+    min-height: 700px;
+  }
+
+  .hero-media::after {
+    background:
+      linear-gradient(180deg, rgba(7, 10, 15, 0.08) 0%, rgba(7, 10, 15, 0.22) 36%, rgba(7, 10, 15, 0.78) 100%),
+      linear-gradient(90deg, rgba(7, 10, 15, 0.16), rgba(7, 10, 15, 0.04));
+  }
+
+  .hero-media img {
+    object-position: center top;
+    transform: scale(1.02);
   }
 
   .hero-copy {
     left: 16px;
     right: 16px;
     top: auto;
-    bottom: 132px;
+    bottom: 114px;
     width: auto;
-    padding: 22px 18px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, rgba(11, 15, 22, 0.18), rgba(11, 15, 22, 0.82));
+    padding: 16px 2px 0;
+    border-radius: 0;
+    background: none;
+    border: 0;
+    backdrop-filter: none;
+    box-shadow: none;
   }
 
   .hero-copy h1 {
-    max-width: 9ch;
+    max-width: 8.5ch;
+    font-size: clamp(2rem, 9.6vw, 2.9rem);
+    line-height: 0.96;
+    text-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
   }
 
   .hero-text {
-    font-size: 0.98rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    max-width: none;
+    text-shadow: 0 8px 22px rgba(0, 0, 0, 0.34);
   }
 
   .hero-actions {
     flex-direction: column;
+    gap: 10px;
+    margin: 18px 0 14px;
+  }
+
+  .hero-actions .button {
+    min-height: 52px;
+    padding: 0 18px;
+    font-size: 0.98rem;
   }
 
   .hero-actions .button {
@@ -690,12 +718,7 @@
   }
 
   .hero-badges {
-    gap: 10px;
-  }
-
-  .hero-badges li {
-    width: 100%;
-    padding: 10px 12px;
+    display: none;
   }
 
   .card-primary {
@@ -712,15 +735,42 @@
 
   .hero-stat {
     min-width: 0;
-    padding: 14px 12px;
+    padding: 12px 10px;
     border-radius: 18px;
   }
 
   .hero-stat strong {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+  }
+
+  .hero-stat span {
+    font-size: 0.8rem;
   }
 
   .process-item {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-media {
+    min-height: 660px;
+  }
+
+  .hero-copy {
+    bottom: 108px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(1.9rem, 9.2vw, 2.5rem);
+    max-width: 8ch;
+  }
+
+  .hero-text {
+    font-size: 0.88rem;
+  }
+
+  .hero-badges li {
+    font-size: 0.85rem;
   }
 }
